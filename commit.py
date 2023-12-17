@@ -5,4 +5,4 @@ os.system("git add .")
 os.system(f'git commit -m "{name}"')
 os.system("git push")
 
-print("\n Program Selesai, Terimakasih!. \n")
+print("\n Tidak Ada Branch \n")

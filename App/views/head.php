@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-<div class="navbar bg-base-300">
+<div class="navbar bg-base-300" style="position: fixed;">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
@@ -17,6 +17,8 @@
       </div>
       <ul tabindex="0" class="menu menu-sm dropdown-content mt-4 z-[1] p-2 shadow bg-base-300 rounded-box w-52">
         <li><a href="?">Beranda</a></li>
+        <li><a href="?a=joki">Joki</a></li>
+        <li><a href="?a=tugas">Tugas</a></li>
       </ul>
     </div>
   </div>
@@ -51,5 +53,8 @@
     }
     .spasi30p{
       margin-bottom: 30px;
+    }
+    .spasiheader{
+      margin-top: 80px;
     }
 </style>

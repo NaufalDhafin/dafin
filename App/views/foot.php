@@ -5,5 +5,6 @@
     <p>Created By Naufal Dhafin</p>
     <p>Source From : 
         <a href="https://daisyui.com/">daisyUI</a>,
+        <a href="https://uiverse.io/">UIVERSE</a>,
         <a href="https://remixicon.com/">Remix Icon</a>.</p>
 </footer>

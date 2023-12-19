@@ -8,7 +8,15 @@ if(isset($_GET['a'])){
     if($page == 'beranda'){
         beranda();
     }
-    
+    elseif($page == 'login'){
+        login();
+    }
+    elseif($page == 'joki'){
+        joki();
+    }
+    elseif($page == 'tugas'){
+        tugas();
+    }
     else{
         beranda();
     }

@@ -44,6 +44,7 @@
         width: 95%;
         margin-top: 10px;
         border-radius: 10px;
+        z-index: 1;
     }
     .spasi10p{
       margin-bottom: 10px;

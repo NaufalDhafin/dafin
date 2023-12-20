@@ -58,4 +58,8 @@
     .spasiheader{
       margin-top: 80px;
     }
+    #jdl{
+      font-size: 18px;
+      font-weight: 500;
+    }
 </style>

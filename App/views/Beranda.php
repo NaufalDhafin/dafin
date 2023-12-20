@@ -5,7 +5,7 @@
         <div class="max-w-md">
             <h1 class="text-4xl font-bold">Selamat Datang!</h1>
             <p class="py-6">
-                Makasih yaa, udah datang di website ini. <br>
+                Makasih yaa udah datang di website ini. <br>
                 Aku nyediain beberapa fitur buat kalian loh!, Semoga aja kalian senang sama fitur yang tersedia di sini. <br>
                 Ayo liat ada fitur apa aja di sini, klik <strong> "Lihat Fitur" </strong>yaa. <br>
                 Oh iyaa, Selamat tahun baru dan semoga ga ada cerita buruk di tahun depan.

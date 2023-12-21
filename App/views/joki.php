@@ -11,18 +11,18 @@
     </div>
     <div class="inp">
       <p>Whatsapp</p>
-      <input class="bg-base-300" type="text" name="whatapp">
+      <input class="bg-base-300" type="text" name="whatsapp">
     </div>
   </div>
   <div class="form">
     <p class="p">Data Tugas</p>
     <div class="inp">
       <p>Judul Tugas</p>
-      <input class="bg-base-300" type="text" name="nama">
+      <input class="bg-base-300" type="text" name="judul">
     </div>
     <div class="inp">
       <p>saran/masukan Tentang Tugas</p>
-      <textarea class="bg-base-300" name="" cols="30" rows="3" placeholder="Contoh: jangan pake source/sumber nya, background warna biru, blalabalaba..."></textarea>
+      <textarea class="bg-base-300" name="saran" cols="30" rows="3" placeholder="Contoh: jangan pake source/sumber nya, background warna biru, blalabalaba..."></textarea>
     </div>
   </div>
   <div class="form">
@@ -33,7 +33,7 @@
     </div>
   </div>
   <div class="submit">
-    <button class="btn">Kirim</button>
+    <button class="btn" name="kirim" type="submit">Kirim</button>
     <!-- <a href="">Data Yang Ngejoki</a> -->
   </div>
 </form>
@@ -119,6 +119,7 @@
 
 <?php
 if (isset($_POST['uploads'])) {
+
   $namaFile = $_FILES['berkas']['name'];
   $namaSementara = $_FILES['berkas']['tmp_name'];
 
@@ -126,7 +127,19 @@ if (isset($_POST['uploads'])) {
   $terupload = move_uploaded_file($namaSementara, $dirUpload . $namaFile);
 
   if ($terupload) {
-    echo "<script>window.alert('Tugas kamu berhasil terkirim!. Mohon menunggu untuk antrian joki, kami akan menghubungi anda.')</script>";
+    $nama     = $_POST['nama'];
+    $wa       = $_POST['whatsapp'];
+    $judul    = $_POST['judul'];
+    $tanggal  = date("d/m/Y | H.i.s");
+
+    $query = $config->query("INSERT INTO joki SET nama = '$nama', whatsapp = '$wa', judul = '$judul', tanggal = '$tanggal'");
+
+    if($query){
+      echo "<script>window.alert('Tugas kamu berhasil terkirim!. Mohon menunggu untuk antrian joki, kami akan menghubungi anda.')</script>";
+    }
+    else{
+      echo "Upload Gagal!";
+    }
   } else {
     echo "Upload Gagal!";
   }
